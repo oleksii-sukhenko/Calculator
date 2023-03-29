@@ -109,4 +109,39 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content" />
 
+
+
+    <Button
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/four_button"
+        android:text="7"
+        android:id="@+id/seven_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        app:layout_constraintLeft_toRightOf="@id/one_button"
+        app:layout_constraintBottom_toTopOf="@id/four_button"
+        android:text="8"
+        android:id="@+id/eight_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        app:layout_constraintLeft_toRightOf="@id/two_button"
+        app:layout_constraintBottom_toTopOf="@id/four_button"
+        android:text="9"
+        android:id="@+id/nine_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        app:layout_constraintLeft_toRightOf="@id/three_button"
+        app:layout_constraintBottom_toTopOf="@id/four_button"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="*"
+        android:id="@+id/multiply_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
