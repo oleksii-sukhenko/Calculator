@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.ezylang.evalex.Expression
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -118,8 +119,12 @@ class MainActivity : AppCompatActivity() {
 
         equalButton.setOnClickListener {
 
-            numberStringBuilder.append("=")
-            resultTextView.text = numberStringBuilder
+            val stringExpression = numberStringBuilder.toString()
+            val expression = Expression(stringExpression)
+            val expressionResult = expression.evaluate().numberValue.toString()
+            resultTextView.text = expressionResult
+
+            numberStringBuilder.clear()
         }
 
     }
