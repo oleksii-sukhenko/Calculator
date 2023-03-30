@@ -4,6 +4,7 @@ plugins {
 }
 
 android {
+
     namespace 'com.example.calculator'
     compileSdk 33
 
@@ -17,6 +18,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        viewBinding = true
+    }
+    
     buildTypes {
         release {
             minifyEnabled false
