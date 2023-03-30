@@ -125,6 +125,7 @@ class MainActivity : AppCompatActivity() {
             resultTextView.text = expressionResult
 
             numberStringBuilder.clear()
+            numberStringBuilder.append(expressionResult)
         }
 
     }
