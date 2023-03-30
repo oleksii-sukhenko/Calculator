@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         val divisionButton = findViewById<Button>(R.id.division_button)
 
         val clearButton = findViewById<Button>(R.id.clear_button)
+        val backspaceButton = findViewById<Button>(R.id.backspace_button)
 
         val resultTextView = findViewById<TextView>(R.id.textView)
 
@@ -131,6 +132,23 @@ class MainActivity : AppCompatActivity() {
 
             resultTextView.text = "0"
             numberStringBuilder.clear()
+        }
+
+        backspaceButton.setOnClickListener {
+            try {
+                val lastIndex = numberStringBuilder.length - 1
+                numberStringBuilder.deleteAt(lastIndex)
+
+                if (numberStringBuilder.isEmpty()) {
+                    resultTextView.text = "0"
+                } else resultTextView.text = numberStringBuilder
+
+            } catch (t: Throwable) {
+                Toast.makeText(this@MainActivity, "Exception: $t", Toast.LENGTH_LONG)
+                    .show()
+            }
+
+
         }
 
         equalButton.setOnClickListener {
