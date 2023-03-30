@@ -27,8 +27,14 @@ class MainActivity : AppCompatActivity() {
         val minusButton = findViewById<Button>(R.id.minus_button)
         val multiplyButton = findViewById<Button>(R.id.multiply_button)
 
-        val textView = findViewById<TextView>(R.id.textView)
+        val resultTextView = findViewById<TextView>(R.id.textView)
 
-        textView.text = "whats up!"
+        val numberStringBuilder = StringBuilder()
+
+        oneButton.setOnClickListener {
+
+            numberStringBuilder.append(1)
+            resultTextView.text = numberStringBuilder
+        }
     }
 }
