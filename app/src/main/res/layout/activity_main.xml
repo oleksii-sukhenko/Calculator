@@ -140,7 +140,7 @@
     <Button
         android:id="@+id/clear_button"
         style="@style/RoundButtonStyle"
-        android:text="CLEAR"
+        android:text="Clear"
         app:layout_constraintBottom_toTopOf="@id/seven_button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/division_button" />
@@ -148,9 +148,19 @@
     <Button
         android:id="@+id/backspace_button"
         style="@style/RoundButtonStyle"
-        android:text="DELETE"
+        android:text="Delete"
         app:layout_constraintBottom_toTopOf="@id/division_button"
         app:layout_constraintLeft_toRightOf="@id/three_button"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/history_button"
+        android:text="Hstr"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/round_button"
         app:layout_constraintRight_toRightOf="parent" />
 
 
