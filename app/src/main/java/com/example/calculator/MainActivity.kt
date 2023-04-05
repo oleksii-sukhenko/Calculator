@@ -134,6 +134,7 @@ class MainActivity : AppCompatActivity() {
         historyButton.setOnClickListener{
             //open new activity with history of math operations
             val intent = Intent(this@MainActivity, HistoryActivity::class.java)
+            intent.putExtra("history_list", historyList.toTypedArray())
             startActivity(intent)
         }
     }
