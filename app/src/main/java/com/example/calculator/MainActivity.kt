@@ -1,5 +1,6 @@
 package com.example.calculator
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -128,6 +129,12 @@ class MainActivity : AppCompatActivity() {
         equalButton.setOnClickListener {
             calculate(resultTextView)
             saveToHistory()
+        }
+
+        historyButton.setOnClickListener{
+            //open new activity with history of math operations
+            val intent = Intent(this@MainActivity, HistoryActivity::class.java)
+            startActivity(intent)
         }
     }
 
